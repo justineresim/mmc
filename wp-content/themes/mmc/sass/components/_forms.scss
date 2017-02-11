@@ -1,0 +1,285 @@
+/* ==========================================================================
+   Global Forms
+   ========================================================================== */
+
+form{
+	.g-form-group{
+		margin-bottom: 2em;
+		position: relative;
+		&.g-sm{
+			margin-bottom: $sm-gutter;
+		}
+	}
+	label{
+		display: inline-block;
+		max-width: 100%;
+		margin-bottom: 10px;
+		font-family: $font-bold;
+		font-weight: normal;
+		color: $label-color;
+		&.g-hidden{
+			display: none;
+		}
+	}
+	.g-inline-form{
+		@extend .g-clearfix;
+		.g-form-control{
+		    display: block;
+    		float: left;
+			width: auto !important;
+			margin: 0 30px 0 0;
+		}
+		.g-form-group{
+			display: block;
+    		float: left;
+    		min-height: 42px;
+			&.g-pull-right{
+				float: right;
+				.g-form-control{
+					margin: 0;
+				}
+			}
+		}
+		&.g-pull-right{
+			.g-form-control{
+				margin: 0;
+			}
+		}
+		label, .g-radio-heading, .g-checkbox-heading{
+		    margin: 13px 15px 0 0;
+		    display: block;
+    		float: left;
+		}
+		.g-checkbox input[type=checkbox] + label, .g-radio-container .g-radio-label{
+			margin-right: 15px;
+			margin-top: 10px;
+			display: block;
+    		float: left;
+		}
+	}
+	.g-form-horizontal{
+		.g-form-group, .g-radio-container .g-radio-label{
+			display: block;
+			text-align: left;
+			margin-top: 0;
+		}
+		.g-inline-form{
+			.g-radio-container .g-radio-label, .g-checkbox input[type=checkbox] + label{
+				display: inline;
+			}
+		}
+		label{
+			margin-top: 12px;
+		}
+		label, .g-radio-heading, .g-checkbox-heading{
+			text-align: right;
+			display: block;
+			@media (max-width: $max-break-tablet) {
+				text-align: left;
+			}
+		}
+		.g-checkbox label, .g-radio label{
+			text-align: left;
+		}
+		.g-radio-heading, .g-checkbox-heading{
+		    margin-top: 3px;
+		}
+	}
+	.g-error-state{
+		.g-form-control{
+			border: 1px solid $error-color;
+		}
+		p{
+			color: $error-color;
+		}
+	}
+}
+
+
+.g-checkbox-error{
+	.g-radio-heading{
+		color: $error-color;
+	}
+}
+
+//---------------------- Form inputs -------------------------
+
+.g-form-control, input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea, select{
+	display: block;
+	width: 100%;	
+	padding: 10px 15px;
+	border: 1px solid $border-color;
+	border-radius: $input-border-radius;
+	color: $input-color;
+	-webkit-box-shadow: $input-box-shadow;
+	box-shadow: $input-box-shadow;
+	@extend .transition;
+	height: $btn-height;
+	&:focus{
+		border-color: $input-active-border-color;
+		outline: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+	    color: $input-placeholder-color;
+	}
+    &:disabled{
+		opacity: .5;
+		pointer-events: none;
+	}
+}
+
+textarea.g-form-control{
+	height: auto;
+	max-width: 100%;
+}
+
+
+//---------------------- Selects -------------------------
+
+
+select.g-form-control, select{
+	position: relative;
+	padding-right: 45px;
+	font-weight: normal;
+	box-shadow: $select-box-shadow;
+    appearance: none;
+    background: url(/wp-content/themes/mmc/img/dropdown-arrows.png) no-repeat right #ffffff;
+    cursor: pointer;
+}
+
+//ie
+select.g-form-control::-ms-expand, select::-ms-expand {
+    display: none;
+}
+
+
+//---------------------- Checkboxes and Radio Buttons -------------------------
+
+.g-checkbox{
+	color: $input-color;
+	input[type=checkbox] {
+		display:none;
+		+ label{
+			position: relative;
+			line-height: 25px;
+			cursor: pointer;
+			font-weight: normal;
+			font-family: $body-font;
+		    display: block;
+    		margin: 0 0 5px;
+			&:before{
+				content: ' ';
+				font-size: 20px;
+				font-family: $font-bold;
+				text-rendering: auto;
+				border: 1px solid $input-border-color;
+				height: 17px;
+				width: 17px;
+				border-radius: 2px;
+				display:inline-block;
+				padding: 0;
+				top: 2px;
+				position: absolute;
+				cursor: pointer;
+			}
+			span{
+				cursor: pointer;
+			    margin-left: 27px;
+		        margin-right: 10px;
+			}
+		}
+	}
+	input[type=checkbox]:checked + label:before{
+		content: "\2713";
+		color: $checkbox-active-color;
+		background-color: #fff;
+		border: 1px solid $input-border-color;
+		height: 17px;
+		width: 17px;
+	    font-size: 17px;
+        line-height: 17px;
+		display:inline-block;
+		position: absolute;
+	}	
+}
+
+.g-radio-heading, .g-checkbox-heading{
+	margin-bottom: 10px;
+	font-family: $font-bold;
+	font-weight: normal;
+	color: $label-color;
+}
+
+label{
+	font-weight: normal;
+	font-family: $font-bold;
+	color: $label-color;
+}
+
+.g-hidden-labels{
+	label{
+		display: none !important;
+	}
+	&.g-inline-form{
+		.g-form-control{
+			margin-left: 0;
+		}
+	}
+	&.g-checkbox{
+		input[type=checkbox]+label span{
+			margin-left: 0;
+			margin-right: 0;
+		}
+		label{
+			display: block !important;
+		}
+	}
+}
+
+.g-error{
+	color: red !important;
+}
+
+
+.g-radio-container{
+	.g-radio {
+	    opacity: 0;
+	    position: absolute;   
+	}
+	.g-radio, .g-radio-label {
+	    display: inline-block;
+	    vertical-align: middle;
+	    cursor: pointer;
+	}
+	.g-radio-label {
+	    position: relative;
+	    color: $input-color;
+	    font-weight: normal;
+	    line-height: 25px;
+	    font-family: $body-font;
+	}
+	.g-radio + .g-radio-label:before {
+	    content: '';
+	    background: #fff;
+	    border: 1px solid $input-border-color;
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 20px;
+	    height: 20px;
+	    padding: 1px;
+	    margin-right: 10px;
+	    text-align: center;
+	}
+	.g-radio + .g-radio-label:before {
+	    border-radius: 50%;
+	}
+	.g-radio:checked + .g-radio-label:before {
+	    background: $radio-active-color;
+	    box-shadow: inset 0px 0px 0px 3px #fff;
+	}
+}
+
+
+

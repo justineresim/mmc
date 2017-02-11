@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Profile pages
+   ========================================================================== */
+
+.modal-profile{
+	.g-header{
+		
+	}
+}
+
+.g-icons{
+	margin: 10px 0 20px;
+	font-size: 1.1em;
+	color: $grey-3;
+	font-weight: 300;
+	> span, > img{
+		display: inline-block;
+		margin: 0 15px 5px 0;
+	}
+	> img{
+		height: 25px;
+	}
+	&.g-sm{
+		margin: 10px 0 15px;
+		font-size: 1em;
+		> span, > img{
+			display: inline-block;
+			margin: 0 10px 3px 0;
+		}
+		> img{
+			height: 15px;
+		}
+	}
+}

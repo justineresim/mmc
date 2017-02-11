@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Welcome page - new parter sign up
+   ========================================================================== */
+
+body.welcome{
+	@media (min-width: 900px){
+		.g-container {
+		    width: 750px;
+		}
+	}
+	h1{
+		text-align: center;
+	}
+	.gform_wrapper{
+		margin-top: 0;
+	}
+	.gform_heading{
+		width: 100%;
+		text-align: center;
+		.gform_description{
+			max-width: 620px;
+		    margin: 0px auto 40px;
+		}
+	}
+	.gform_wrapper .gform_footer input[type=submit]{
+		margin: 0 auto;
+		display: block;
+	}
+}

@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.g-pagination{
+	*[class*=g-btn].g-btn-sm{
+		display: block;
+		float: left;
+		text-align: center;
+	    padding: 0 18px;
+	    line-height: 38px;
+	    height: 40px;
+	    margin-left: -1px;
+	    &:hover{
+	    	z-index: 3;
+	    }
+	    &.g-active, &:active{
+	    	z-index: 2;
+	    }
+	}
+	@media (max-width: $max-break-mobile) {
+    	*[class*=g-btn].g-btn-sm.g-nums{
+    		display: none;
+    		&.g-active{
+    			display: inline-block;
+    		}
+    	}
+	}
+	&.g-sm{
+		> a{
+			margin: 3px;
+			padding: 3px;
+			color: $grey-3;
+			text-decoration: none;
+			line-height: 25px;
+			border: 1px solid transparent;
+			min-width: 30px;
+			text-align: center;
+			display: block;
+			float: left;
+			border-radius: 2px;
+			&:hover{
+		    	color: $brand-2;
+		    }
+			&.g-active, &:active{
+		    	color: $brand-2;
+		    	border: 1px solid $brand-2;
+		    }
+		}
+		@media (max-width: $max-break-mobile) {
+	    	.g-nums{
+	    		display: none;
+	    		&.g-active{
+	    			display: inline-block;
+	    		}
+	    	}
+		}
+	}
+}

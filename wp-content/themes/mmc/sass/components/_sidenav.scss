@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Partner Side Menu
+   ========================================================================== */
+
+
+nav.g-side-nav{
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		border: 1px solid $grey-6;
+		li{
+			margin: 0;
+			padding: 0;
+			border-bottom: 1px solid $grey-6;
+			position: relative;
+			a{
+				padding: 12px 25px 12px 15px;
+				display: block;
+				text-decoration: none;
+				color: #000;
+				font-size: 16px;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+			&.current-menu-item{
+				background-color: $grey-8;
+				font-family: $font-bold;
+				&:after{
+				    content: "\f3d1";
+					display: inline-block;
+					font-family: "Ionicons";
+					speak: none;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					text-rendering: auto;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+				    position: absolute;
+					right: 10px;
+					top: 13px;
+					color: #000;
+				}
+			}
+		}
+	}
+}

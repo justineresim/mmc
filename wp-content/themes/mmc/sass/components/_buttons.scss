@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+*[class*="g-btn"], .g-btn{
+	position: relative;
+	display: inline-block;
+	padding: $btn-padding;
+	margin-bottom: 0;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+	height: $btn-height;
+	text-align: $btn-text-align;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	background-color: $btn-bg;
+	border-radius: $btn-border-radius;
+	font-family: $btn-font-family;
+	color: $btn-color;
+	border: 1px solid $btn-border;
+	text-decoration: none;
+	outline: none;
+	@extend .transition;
+	&.g-btn-block{
+		width: 100%;
+	}
+	&.g-btn-sm{
+		padding: $btn-sm-padding;
+		font-size: $btn-sm-font-size;
+		line-height: $btn-sm-line-height;
+		height: $btn-sm-height;
+		font-family: $body-font;
+	}
+	&.g-btn-xs{
+		padding: $btn-xs-padding;
+		font-size: $btn-xs-font-size;
+		line-height: $btn-xs-line-height;
+		height: $btn-xs-height;
+		font-family: $body-font;
+	}
+	&:active, &.g-active {
+		text-decoration: none;
+		background: $btn-active-bg;
+		border: none;
+		color: $btn-active-color;
+		border: 1px solid $btn-active-border;
+	}
+	&.g-btn-2{
+		background: $btn-2-bg;
+		border: 1px solid $btn-2-border;
+		color: $btn-2-color;
+	}
+	&.g-btn-3{
+		background: $btn-3-bg;
+		border: none;
+		color: $btn-3-color;
+	}
+	&.g-btn-4{
+		background: $btn-4-bg;
+		border: none;
+		color: $btn-4-color;
+	}
+	&.g-disabled, &:disabled{
+		opacity: .2;
+		pointer-events: none;
+	}
+}
+
+//non touch screen - add hovers
+html.no-touch{
+    *[class*="g-btn"], .g-btn{
+		&:hover, &:focus {
+			text-decoration: none;
+			border: none;
+			color: $btn-hover-color;
+			background-color: $btn-hover-bg;
+			border: 1px solid $btn-hover-border;
+			outline: 0;
+		}
+		&:active, &.g-active {
+			text-decoration: none;
+			background: $btn-active-bg;
+			border: none;
+			color: $btn-active-color;
+			border: 1px solid $btn-active-border;
+		}
+		&.g-btn-2{
+			&:hover, &:focus {
+				background: $btn-2-hover-bg;
+				border: 1px solid $btn-2-hover-border;
+				color: $btn-2-hover-color;
+			}
+			&:active, &.g-active {
+				background: $btn-2-active-bg;
+				border: 1px solid $btn-2-active-border;
+				color: $btn-2-active-color;
+			}
+		}
+		&.g-btn-3{
+			&:hover, &:focus {
+				background: $btn-3-hover-bg;
+				border: none;
+				color: $btn-3-hover-color;
+			}
+			&:active, &.g-active {
+				background: $btn-3-active-bg;
+				border: none;
+				color: $btn-3-active-color;
+			}
+		}
+		&.g-btn-4{
+			&:hover, &:focus {
+				background: $btn-4-hover-bg;
+				border: none;
+				color: $btn-4-hover-color;
+			}
+			&:active, &.g-active {
+				background: $btn-4-active-bg;
+				border: none;
+				color: $btn-4-active-color;
+			}
+		}
+	}
+}
+
+
+
+
+

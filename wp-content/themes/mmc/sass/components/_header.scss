@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Global Header
+   ========================================================================== */
+
+@-webkit-keyframes Animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@-moz-keyframes Animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes Animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+header.g-header{
+	width: 100%;
+	background-color: #fff;
+	z-index: 100;
+	@extend .g-clearfix;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+	.logo{
+		float: left;
+		height: 70px;
+		a{
+			display: block;
+			background: url(/wp-content/themes/mmc/img/logo.png) center left no-repeat;
+			margin: 13px 0;
+			width: 181px;
+			height: 40px;
+		}
+		@media (max-width: $max-break-tablet) {
+			height: 50px;
+			a{
+				background: url(/wp-content/themes/mmc/img/logo-sm.png) center left no-repeat;
+				margin: 0;
+				width: 55px;
+				height: 53px;
+			}
+		}
+	}
+	nav.g-nav{
+		text-align: center;
+		height: 65px;
+		float: left;
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			li{
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+			}
+		}
+		a{
+			display: block;
+			float: left;
+			color: $grey-2;
+			padding: 25px 0 0 45px;
+			font-size: 13px;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+			@media (max-width: $max-break-tablet) {
+				padding: 12px 0 0 25px;
+			}
+			&.g-active{
+				
+			}
+			&:hover{
+				color: $grey-1;
+			}
+	    }
+	}
+	.g-menu{
+		float: right;
+		padding-top: 15px;
+		a{
+			text-decoration: none;
+		}
+		.g-search, .g-new{
+			display: inline-block;
+		}
+		.g-search{
+			font-size: 20px;
+			padding: 10px;
+			margin-right: 5px;
+		}
+		a.g-loggedout-link{
+			font-size: 16px;
+			margin-left: 10px;
+			&.g-signin{
+				margin-left: 20px;
+				font-family: $font-bold;
+			}
+		}
+		.g-new{
+			text-align: center;
+			height: 30px;
+			padding: 0 7px;
+			line-height: 30px;
+			font-size: 18px;
+			margin: 0 0 0 15px;
+			border: 1px solid $grey-6;
+			text-transform: uppercase;
+		    font-size: 12px;
+		    font-family: $heading-font;
+			&:hover{
+				background-color: $grey-8;
+			}
+		}
+		.g-menu-dropdown{
+			display: inline-block;
+			position: relative;
+			.g-menu-heading{
+				display: inline-block;
+				a{
+					display: block;
+				}
+			}
+			.g-menu-list{
+				font-size: 15px;
+				display: none;
+				position: absolute;
+				right: 0;
+				top: 40px;
+				background-color: #fff;
+				border: 1px solid $grey-7;
+				box-shadow: 1px 1px 2px rgba(0,0,0,.1);
+				width: 200px;
+				padding: 5px 0;
+				&:after, &:before {
+					bottom: 100%;
+					left: 80%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+				}
+				&:after {
+					border-color: rgba(255, 255, 255, 0);
+					border-bottom-color: #ffffff;
+					border-width: 10px;
+					margin-left: -10px;
+				}
+				&:before {
+					border-color: rgba(194, 225, 245, 0);
+					border-bottom-color: $grey-7;
+					border-width: 11px;
+					margin-left: -11px;
+				}
+				a{
+					display: block;
+					padding: 6px 10px;
+					&.g-signout{
+						font-family: $font-bold;
+					}
+					&:hover{
+						background-color: $grey-8;
+					}
+				}
+			}
+		}
+	}
+}

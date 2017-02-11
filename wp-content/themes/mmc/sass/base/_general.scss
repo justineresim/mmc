@@ -1,0 +1,190 @@
+/* ==========================================================================
+   General Styling
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Body reset
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: $body-font;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    b,
+    strong {
+
+        em, i{
+
+        }
+    }
+    em, i{
+
+        b,
+        strong {
+
+        }
+    }
+    @media (max-width: $max-break-tablet) {
+        font-size: 95%;
+    }
+    @media (max-width: $max-break-mobile) {
+        font-size: 88%;
+    }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: underline;
+    cursor: pointer;
+    @extend .transition;
+    &.g-disabled {
+        opacity: .35;
+        pointer-events: none;
+    }
+}
+
+a.g-link-2{
+    color: $link-color-2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.g-link-3{
+    color: $link-color-3;
+}
+
+a.g-icon-link{
+    text-decoration: none;
+    display: block;
+    margin: 3px 0;
+    *[class*="ion-"], &[class*="ion-"]{
+        color: $brand-2;
+    }
+}
+
+img.g-icon-leaf{
+    height: 13px;
+    display: inline-block;
+}
+
+//non touch screen - add hovers/active
+html.no-touch{
+    a {
+        &:hover, &:focus{
+            color: $link-color-hover;
+            outline: none;
+        }
+        &:active {
+            color: $link-color-active;
+            outline: none;
+        }
+    }
+    a.g-card-title{
+         &:hover, &:focus, &:active{
+            text-decoration: underline;
+            color: $grey-1;
+        }
+    }
+    a.g-link-2{
+        &:hover, &:focus{
+          color: $link-color-hover-2;
+        }
+        &:active {
+            color: $link-color-active-2;
+            outline: none;
+        }
+    }
+    a.g-link-3{
+        &:hover, &:focus{
+          color: $link-color-hover-3;
+        }
+        &:active {
+            color: $link-color-active-3;
+            outline: none;
+        }
+    }
+    a.g-icon-link.ion-heart{
+        &:hover, &:focus, &:active {
+            color: $brand-1;
+            > span{
+                color: $grey-2;
+            }
+        }
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $hr-color;
+    margin: 1em 0;
+}
+
+hr.g-secondary {
+    border: none;
+    border-top: 2px solid $brand-1;
+    margin: 1em auto;
+}
+
+p {
+    margin: .3em 0 1em 0;
+    line-height: $p-line-height;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+sub,sup {
+    font-size: 65%;
+}
+
+
+//lists
+ul,
+ol {
+    margin: .3em 0 1em 0;
+    li {
+        margin-bottom: 0.4em;
+    }
+    ul,
+    ol {
+        margin: 0.3em 0 0.6em 0;
+    }
+}
+
+table {
+    margin: .3em 0 2em 0;
+}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Project Cards
+   ========================================================================== */
+
+.slider-container{
+	.g-card{
+		margin: 10px;
+	}
+}
+.g-card{
+	width: 100%;
+	padding: 15px;
+	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+	position: relative;
+	transition: all .5s;
+	&:hover{
+		transform: scale(1.05);
+	}
+	.g-card-img{
+		display: block;
+		position: relative;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		&:after{
+			content: "";
+		    display: block;
+		    padding-bottom: 76.25%;
+		}
+	}
+	.g-card-content{
+		padding: 5px;
+		position: relative;
+	}
+	.g-card-header{
+		margin-bottom: 10px;
+		a{
+			text-decoration: none;
+		}
+	}
+	img.g-icon-leaf{
+	    height: 13px;
+	    display: inline-block;
+	}
+	//company cards
+	&.g-secondary{
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		&:hover{
+			transform: none;
+		}
+		.g-card-img{
+			background-size: cover;
+			@extend .transition;
+			&:after{
+			    padding-bottom: 133%;
+			}
+			&:hover{
+				opacity: .7;
+			}
+		}
+		.g-card-content{
+			padding: 15px 0;
+		}
+	}
+}

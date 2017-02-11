@@ -1,0 +1,170 @@
+/*
+	Theme Name: MMC
+	Description: Mindfully Made Canada Custom WordPress Theme
+	Version: 1.0
+	Author: Justine Lileikis
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin: 20px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin: 20px auto 20px auto;
+}
+.alignright {
+	float:right;
+	margin: 20px 0 20px 20px;
+	@media (max-width: $max-break-mobile) {
+		float: none;
+		display: block;
+		margin: 20px 0;
+	}
+}
+.alignleft {
+	float:left;
+	margin: 20px 20px 20px 0;
+	@media (max-width: $max-break-mobile) {
+		float: none;
+		display: block;
+		margin: 20px 0;
+	}
+}
+a img.alignright {
+	float:right;
+	margin: 20px 0 20px 20px;
+	@media (max-width: $max-break-mobile) {
+		float: none;
+		display: block;
+		margin: 20px 0;
+	}
+}
+a img.alignnone {
+	margin: 20px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin: 20px 20px 20px 0;
+	@media (max-width: $max-break-mobile) {
+		float: none;
+		display: block;
+		margin: 20px 0;
+	}
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+
+}
+.wp-caption.alignnone {
+	
+}
+.wp-caption.alignleft {
+
+}
+.wp-caption.alignright {
+
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption p.wp-caption-text,
+p.gallery-caption {
+	@extend .g-font-smaller;
+	line-height: 1.4em;
+}
+blockquote{
+	@extend .g-font-large;
+	font-family: $font-italic;
+	color: $grey-4;
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}

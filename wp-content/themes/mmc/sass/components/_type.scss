@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Type
+   ========================================================================== */
+
+//---------------------- Headings -------------------------
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: $heading-font;
+	color: $heading-color;
+	font-weight: bold;
+	a{
+		@extend .transition;
+		text-decoration: none;
+		color: $heading-link-color;
+		&:hover, &:focus {
+			color: $heading-hover-color;
+		}
+	}
+}
+
+h1, .h1{
+	font-size: 2.2em;
+	line-height: 1.2em;
+	margin: 0 0 1em;
+	@media (max-width: $max-break-mobile) {
+		font-size: 1.8em;
+		line-height: 1.2em;
+	}
+}
+
+h2, .h2{
+	font-size: 1.8em;
+	font-weight: normal;
+	@media (max-width: $max-break-mobile) {
+		font-size: 1.3em;
+	}
+}
+
+h3, .h3{
+	font-size: 1.3em;
+	font-weight: bold;
+    @media (max-width: $max-break-mobile) {
+		font-size: 1.1em;
+	}
+}
+ 
+h4, .h4{
+	font-size: 1em;
+	text-transform: uppercase;
+	@media (max-width: $max-break-mobile) {
+		font-size: .9em;
+	}
+}
+
+h5, .h5{
+	font-size: .95em;
+}
+
+h6, .h6{
+	font-size: .82em;
+	text-transform: uppercase;
+}
+
+h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	line-height: $heading-line-height;
+	margin: 1.4em 0 0.6em;
+	&.g-no-top-margin{
+		margin-top: 0;
+	}
+	&.g-no-margin{
+		margin: 0;
+	}
+}

@@ -1,0 +1,203 @@
+/* ==========================================================================
+   General page layout for site
+   ========================================================================== */
+
+.g-container-sm{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: 650px) {
+		width: 600px;
+	}
+}
+
+
+.g-container{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: 750px) {
+		width: 720px;
+	}
+	@media (min-width: 850px) {
+		width: 820px;
+	}
+}
+
+.g-container-lg{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@media (min-width: 750px) {
+		width: 720px;
+	}
+	@media (min-width: 850px) {
+		width: 850px;
+	}
+	@media (min-width: 1000px) {
+		width: 950px;
+	}
+	@media (min-width: 1100px) {
+		width: 1050px;
+	}
+	@media (min-width: 1200px) {
+		width: 1150px;
+	}
+	@media (min-width: 1340px) {
+		width: 1320px;
+	}
+}
+
+.g-container-lg{
+	.g-container-main, .g-container-sidebar{
+		float: left;
+	}
+	.g-container-main{
+		width: 55%;
+		margin-right: 15%;
+		@media (max-width: $max-break-desktop) {
+			margin-right: 10%;
+		}
+		@media (max-width: $max-break-desktop-sm) {
+			margin-right: 5%;
+		}
+		&.g-right{
+			width: 50%;
+			margin-right: 0;
+		    margin-top: 40px;
+		    @media (max-width: $max-break-desktop) {
+				width: 65%;
+			}
+			@media (max-width: $max-break-desktop-sm) {
+				width: 70%;
+			}
+		}
+	}
+
+	.g-container-sidebar{
+		width: 30%;
+		&.g-left{
+			width: 25%;
+			margin-right: 10%;
+			@media (max-width: $max-break-desktop-sm) {
+				margin-right: 5%;
+			}
+		}
+	}
+	@media (max-width: $max-break-tablet) {
+		.g-container-main{
+			width: 100%;
+			margin-right: 0;
+			&.g-right{
+				width: 100%;
+				margin-top: 50px;
+			}
+		}
+		.g-container-sidebar{
+			width: 100%;
+			margin-top: 50px;
+			margin-right: 0;
+			&.g-left{
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: $min-break-tablet) {
+	html, body, body > .wrapper{
+		height: 100%;
+	}
+	header{
+		position: fixed;
+	}
+	footer{
+	    height: 268px;
+	    position: relative;
+	    margin-top: -268px;
+	}
+	main.g-main{
+		min-height: 100%;
+		padding-top: 75px;
+    	padding-bottom: 268px;
+	    &.g-lg-padding{
+		    padding-top: 150px;
+	    	padding-bottom: 350px;
+	    }
+	    &.g-light{
+	    	border-top: 4px solid $brand-2;
+	 		&:before{
+	 			content: '';
+	 			background: $brand-2;
+			    height: 4px;
+			    width: 100%;
+			    position: absolute;
+			    display: block;
+			    top: 70px;
+	 		}
+	    }
+	}
+}
+
+@media (max-width: $max-break-tablet) {
+	main.g-main{
+	    &.g-lg-padding{
+		    padding-top: 30px;
+	   		padding-bottom: 50px;
+	   	}
+	    &.g-light{
+	    	border-top: 4px solid $brand-2;
+	    }
+	}
+}
+
+.g-section{
+	padding-top: 4em;
+	padding-bottom: 4em;
+	@media (max-width: $max-break-tablet) {
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
+	@media (max-width: $max-break-mobile) {
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+}
+
+.g-section-actions{
+	h1, h2{
+		display: inline-block;
+		margin-right: 30px;
+	}
+	*[class*="g-btn"]{
+		display: inline-block;
+	    margin-bottom: 20px;
+    	margin-left: 10px;
+	}
+	.g-pull-right{
+		*[class*="g-btn"]{
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+	@media (max-width: $max-break-mobile) {
+		.g-pull-right{
+			float: none;
+			*[class*="g-btn"]{
+				margin: 0 0 10px;
+				display: block;
+				width: 100%;
+			}
+		}
+		*[class*="g-btn"]{
+			margin: 0 0 10px;
+			display: block;
+			width: 100%;
+		}
+		margin-bottom: 2em;
+	}
+}
